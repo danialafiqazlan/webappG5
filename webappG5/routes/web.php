@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/master', 'App\Http\Controllers\inventoryController@master');
+
+Route::resource('/item', 'App\Http\Controllers\itemController');
