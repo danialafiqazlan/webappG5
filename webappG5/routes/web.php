@@ -18,7 +18,49 @@ Route::get('/', function () {
 
 });
 
+
+
 Route::get('/master', 'App\Http\Controllers\inventoryController@master');
 
+<<<<<<< HEAD
 Route::resource('/item', 'App\Http\Controllers\itemController@items.master');
 Route::get('/error', 'App\Http\Controllers\errorController@errors.404');
+=======
+Route::resource('/user', 'App\Http\ControllitemContriller');
+Route::resource('/item', 'App\Http\Controllers\itemController');
+
+//Log In Routes
+Route::get('/login', 'usersController' );
+
+//StockIn
+Route::get('/stockinlist', 'itemController@showStockIn')->name('stockin');
+Route::post('/stockinitemContriller@stockIn');
+
+//StockIn List
+Route::get('stockinlist', 'itemController@stockInList');
+
+//Update StockIn
+Route::get('updatestockin/{id}itemController@editStockIn');
+Route::post('updatestockin/{id}itemController@updateStockIn');
+
+//Delete StockIn
+Route::get('deletestockin/{id}itemController@deleteStockIn');
+
+//StockOut
+Route::get('/stockoutitemContriller@showStockOut')->name('stockout');
+Route::get('/stockout/getlot/{id}itemController@getLot');
+Route::get('/stockout/gettypecost/{id}itemController@getTypeCost');
+Route::post('/stockoutitemContriller@stockOut');
+
+//StockOut List
+Route::get('stockoutlistitemContriller@stockOutList');
+
+//Update StockOut
+Route::get('updatestockout/{id}itemController@editStockOut');
+Route::get('/updatestockout/getlot/{id}itemController@getLot');
+Route::get('/updatestockout/gettypecost/{id}itemController@getTypeCost');
+Route::post('updatestockout/{id}itemController@updateStockOut');
+
+//Delete StockOut
+Route::get('deletestockout/{id}itemController@deleteStockOut');
+>>>>>>> aa0cb3040b05ad92ef5eb27a678a223cc9b280d0
