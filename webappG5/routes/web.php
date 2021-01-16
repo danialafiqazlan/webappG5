@@ -20,4 +20,5 @@ Route::get('/', function () {
 
 Route::get('/master', 'App\Http\Controllers\inventoryController@master');
 
-Route::resource('/item', 'App\Http\Controllers\itemController');
+Route::resource('/item', 'App\Http\Controllers\itemController@items.master');
+Route::get('/error', 'App\Http\Controllers\errorController@errors.404');
